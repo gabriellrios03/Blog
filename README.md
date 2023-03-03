@@ -12,6 +12,7 @@ Este Curso lo podemos encontrar en [Platzi](https://Platzi.com "Platzi") titulad
 - Y muchos mas (ya me canse de hacer este `Readme.md`)
 - Creado por el Increible Giza Team
 - Incluye Ejemplos Linux, Windows y MacOs
+- Dispoible para todas las edades
 
 [![Curso Platzi](https://imgur.com/PlSY6d6 "Curso Platzi")](# "Curso Platzi")
 
