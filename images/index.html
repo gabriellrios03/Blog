@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Order</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Share Your Order</h1>
+        <button id="shareButton">Share Order</button>
+    </div>
+
+    <script>
+        document.getElementById('shareButton').addEventListener('click', async () => {
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: 'Order Status',
+                        text: 'Mira el estatus de tu orden',
+                        url: 'https://www.orderlinktesting/id=12/ordertracking'
+                    });
+                    console.log('Order shared successfully');
+                } catch (error) {
+                    console.error('Error sharing order:', error);
+                }
+            } else {
+                alert('Sharing is not supported on this browser.');
+            }
+        });
+    </script>
+</body>
+</html>
